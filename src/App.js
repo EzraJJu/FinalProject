@@ -10,25 +10,32 @@ import theme from './theme'
 import { TodosProvider } from './context'
 import SpecificTodo from './SpecificTodo'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const AppWrapper = styled.div`
+  min-height: 100vh;
+  max-width: 100vw;
+`
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <TodosProvider>
+      <AppWrapper>
+        <BrowserRouter basename="/personal-assistant-example">
+          <NavBar />
+          <Switch>
+            <Route path="/todo/:id">
+              <SpecificTodo />
+            </Route>
+            <Route path="/todo">
+              <AllTodos />
+            </Route>
+            <Route path="/">
+              <Greeting />
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </AppWrapper>
+    </TodosProvider>
+  </ThemeProvider>
+)
 
 export default App;
