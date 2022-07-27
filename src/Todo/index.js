@@ -1,7 +1,7 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
 import { Container, Text, DeleteButton } from './styles'
 import { DELETE_TODO } from '../context'
+import { useHistory } from 'react-router-dom'
 
 const Todo = ({ dispatch, id, text }) => {
   const history = useHistory()

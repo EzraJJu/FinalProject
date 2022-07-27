@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import AllTodos from './AllTodos'
 import Greeting from './Greeting'
 import NavBar from './Navbar'

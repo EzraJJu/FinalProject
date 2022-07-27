@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect } from 'react'
-import nanoid from 'nanoid'
+import { nanoid } from 'nanoid'
 
 export const TodosContext = React.createContext()
 
