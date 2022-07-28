@@ -1,13 +1,18 @@
 import { Container, Hello, Text } from './styles'
 import React, { useState, useEffect } from 'react'
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
-const Greeting = () => {
+const Greeting = () => (
     <Container>
       <Hello>Welcome to the MTA</Hello>
-      <Text>What Train ... 2 Train</Text>
+      <Text>What Train ... 2 Train!!!</Text>
+      <Content/>
+      <Score/>
+      <Climb/>
     </Container>
   
-}
+)
 
 export default Greeting
 
@@ -19,23 +24,72 @@ export default Greeting
  * Form
  **************************************/
 
+/*React.ReactDOM.findDOMNode("email")
+ export function BasicExample() {
+  const handlesubmit=() => {
+
+    console.log(React.ReactDOM.findDOMNode("email"))
+
+  }
+   return (
+     <Form >
+       <Form.Group className="mb-3" controlId="formBasicEmail">
+         <Form.Label>Email address</Form.Label>
+         <Form.Control type="email" placeholder="Enter email" />
+         <Form.Text className="text-muted">
+           We'll never share your email with anyone else.
+         </Form.Text>
+       </Form.Group>
+ 
+       <Form.Group className="mb-3" controlId="formBasicPassword">
+         <Form.Label>Password</Form.Label>
+         <Form.Control type="password" placeholder="Password" />
+       </Form.Group>
+       <Form.Group className="mb-3" controlId="formBasicCheckbox">
+         <Form.Check type="checkbox" label="Check me out" />
+       </Form.Group>
+       <Button variant="primary" type="submit" onClick={handlesubmit.bind(this)}>
+         Submit
+       </Button>
+     </Form>
+   );
+ }
+ */
 
 
 
+
+export const Content = () => {
+  const [name, setName] = useState('')
+  const [team, setTeam] = useState('')
+
+  return (
+    <div>
+      <h1>Scouting Form</h1>
+      <p>Enter</p>
+      <form>
+      <input type="text" placeholder="Scout Name" value={name} setValue={setName}/>
+      <input type="text" placeholder="Team Name" value={team} setValue={setTeam}/>
+      </form>
+    </div>
+  )
+}
+
+/*
 const inputContent = () => {
-  const [name, setName] = useState("")
-  const [team, setTeam] = useState("")
+  const [name, setName] = useState('')
+  const [team, setTeam] = useState('')
 
 return (
   <div> 
       <h1>Scouting Form</h1>
       <p>Enter the following fields for the team you are scouting</p> 
-      <inputContent label="Scout Name" value={name} setValue={setName} />
-      <inputContent label="Team Name" value={team} setValue={setTeam} />
+      <input label="Scout Name" value={name} setValue={setName} />
+      <input label="Team Name" value={team} setValue={setTeam} />
   </div>
 )
 }
-
+*/
 
 const Score = () => {
   const [score, setScore] = useState(0)
@@ -60,9 +114,9 @@ const Climb = ({teamClimb}) => {
           <h3>{teamClimb}</h3>
           <h1>{climb}</h1>
           <button onClick={() => setClimb(false)}>No climb</button>
-          <button onClick={() => setScore(true)}>1st level climb</button>
-          <button onClick={() => setScore(true)}>2nd level climb</button>
-          <button onClick={() => setScore(true)}>3rd level climb</button>
+          <button onClick={() => setClimb(true)}>1st level climb</button>
+          <button onClick={() => setClimb(true)}>2nd level climb</button>
+          <button onClick={() => setClimb(true)}>3rd level climb</button>
       </div>
   )
 }

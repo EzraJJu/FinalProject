@@ -9,9 +9,9 @@ import { Container, NavLink } from './styles'
 
 const Navbar = () => (
   <Container>
-    <NavLink to="/">Data</NavLink>
-    <NavLink to="/todo">Pit Scout</NavLink>
-    <NavLink to="/comment">Comment Section</NavLink>
+    <NavLink to="/">Grand Central</NavLink>
+    <NavLink to="/pit">Pit Scout</NavLink>
+    <NavLink to="/team-communicatnion">Team Slack</NavLink>
   </Container>
 )
 

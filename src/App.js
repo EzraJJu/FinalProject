@@ -3,9 +3,9 @@ import './App.css';
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Comments from './Comm'
+import Comments from './Comments'
 import AllTodos from './AllTodos'
-import Greeting from './Data'
+import Greeting from './Greeting'
 import NavBar from './Navbar'
 import theme from './theme'
 import { TodosProvider } from './context'
@@ -24,16 +24,16 @@ const App = () => (
           <NavBar />
           <Switch>
             <Route path="/team-communication">
-              <Comm />
+              <Comments />
             </Route>
-            <Route path="/todo/:id">
+            <Route path="/pit/:id">
               <SpecificTodo />
             </Route>
-            <Route path="/todo">
+            <Route path="/pit">
               <AllTodos />
             </Route>
             <Route path="/">
-              <Data />
+              <Greeting />
             </Route>
           </Switch>
         </BrowserRouter>
