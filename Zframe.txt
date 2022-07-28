@@ -1,0 +1,12 @@
+First page:
+Landing page and data page prompts form for general scouters to fill out
+(somehow) puiblicy graphy from form fill out (possible api deploy here?) form as input
+graph output. Adds new way to look at games for the year.
+
+Second Page: 
+Pit scouting to do
+writing notes on what teams want and highest teams at the time 
+(either here or next page embed blue allience)
+
+Third page: 
+Team comm (for now) embed slack

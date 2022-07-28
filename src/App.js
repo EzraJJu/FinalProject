@@ -3,8 +3,9 @@ import './App.css';
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Comments from './Comm'
 import AllTodos from './AllTodos'
-import Greeting from './Greeting'
+import Greeting from './Data'
 import NavBar from './Navbar'
 import theme from './theme'
 import { TodosProvider } from './context'
@@ -19,9 +20,12 @@ const App = () => (
   <ThemeProvider theme={theme}>
     <TodosProvider>
       <AppWrapper>
-        <BrowserRouter basename="/personal-assistant-example">
+        <BrowserRouter basename="/Metro-Team395">
           <NavBar />
           <Switch>
+            <Route path="/team-communication">
+              <Comm />
+            </Route>
             <Route path="/todo/:id">
               <SpecificTodo />
             </Route>
@@ -29,7 +33,7 @@ const App = () => (
               <AllTodos />
             </Route>
             <Route path="/">
-              <Greeting />
+              <Data />
             </Route>
           </Switch>
         </BrowserRouter>

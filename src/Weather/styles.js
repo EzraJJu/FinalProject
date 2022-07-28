@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+/*
 export const Container = styled.div`
   width: 100%;
 `
@@ -18,3 +18,4 @@ export const Text = styled.p`
   font-size: 18px;
   color: ${({ theme }) => theme.colors.fonts.body};
 `
+*/

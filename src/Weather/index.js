@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+/*
 import React from 'react'
 import { Container, Header, Text } from './styles'
 
@@ -23,3 +24,4 @@ const Weather = ({
 )
 
 export default Weather
+*/
