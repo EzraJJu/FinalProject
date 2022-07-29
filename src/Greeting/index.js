@@ -1,13 +1,18 @@
 import { Container, Hello, Text } from './styles'
 import React, { useState, useEffect } from 'react'
+import App from '../Comments'
+/*
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+*/
 
 const Greeting = () => (
     <Container>
       <Hello>Welcome to the MTA</Hello>
       <Text>What Train ... 2 Train!!!</Text>
+      <Hello>This is the scouting form</Hello>
       <Content/>
+      <Content2/>
       <Score/>
       <Climb/>
     </Container>
@@ -57,39 +62,86 @@ export default Greeting
  */
 
 
+/*
+export function Content() {
+  const [data,setData]=useState(null); 
+  const [print,setPrint]=useState(false); 
 
-
-export const Content = () => {
-  const [name, setName] = useState('')
-  const [team, setTeam] = useState('')
-
+  function getData(val) 
+  {
+    setData(val.target.value)
+    setPrint(false)
+    console.warn(val.target.value)
+  }
   return (
-    <div>
-      <h1>Scouting Form</h1>
-      <p>Enter</p>
-      <form>
-      <input type="text" placeholder="Scout Name" value={name} setValue={setName}/>
-      <input type="text" placeholder="Team Name" value={team} setValue={setTeam}/>
-      </form>
+    <div className="App">
+      {
+      print?
+      <h1>{data}</h1>
+      :null
+      }
+      <input type="text" onChange={getData}/>
+      <button onClick={()=>setPrint(true)}> Print Value</button>
     </div>
   )
 }
 
-/*
-const inputContent = () => {
-  const [name, setName] = useState('')
-  const [team, setTeam] = useState('')
-
-return (
-  <div> 
-      <h1>Scouting Form</h1>
-      <p>Enter the following fields for the team you are scouting</p> 
-      <input label="Scout Name" value={name} setValue={setName} />
-      <input label="Team Name" value={team} setValue={setTeam} />
-  </div>
-)
-}
+^^^^^^^^^^^^^^^^^^^^^
+reference code:
+https://www.youtube.com/watch?v=Px4Lm8NixtE 
 */
+
+export const Content = () => {
+  const [data, setData] = useState(null);
+  const [print, setPrint] = useState(false);
+
+  function getData(val){
+    setData(val.target.value)
+    setPrint(false)
+    console.warn(val.target.value)
+  }
+
+  return (
+    <div>
+      {
+        print?
+        <h1>{data}</h1>
+        :null
+      }
+      <p>Enter your name</p>
+      <form>
+      <input type="text" onChange={getData} placeholder="Your Name"/>
+      </form>
+      <button onClick={()=>setPrint(true)}> Submit</button>
+    </div>
+  )
+}
+
+export const Content2 = () => {
+  const [data, setData] = useState(null);
+  const [print, setPrint] = useState(false);
+
+  function getData(val){
+    setData(val.target.value)
+    setPrint(false)
+    console.warn(val.target.value)
+  }
+
+  return (
+    <div>
+      {
+        print?
+        <h1>{data}</h1>
+        :null
+      }
+      <p>Enter the team name and/or number that you are scouting</p>
+      <form>
+      <input type="text" onChange={getData} placeholder="Your Name"/>
+      </form>
+      <button onClick={()=>setPrint(true)}> Submit</button>
+    </div>
+  )
+}
 
 const Score = () => {
   const [score, setScore] = useState(0)
