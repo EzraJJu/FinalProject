@@ -10,15 +10,15 @@ const theme = {
   colors: {
     layout: {
       background: 'white',
-      accent: '#00A676',
-      darkAccent: '#008E66',
+      accent: '#000000',
+      darkAccent: '#000000',
       secondary: '#F7F9F9',
     },
     fonts: {
       header: 'rgba(0,0,0,0.8)',
       body: 'rgba(0,0,0,0.8)',
       placeholder: 'rgba(0,0,0,0.6)',
-      accent: '#00A676',
+      accent: '#d4af37',
       button: '#ffffff',
     },
   },

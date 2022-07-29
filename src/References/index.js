@@ -32,3 +32,24 @@ const Refs = () => {
 export default Refs
 
 /* https://rapidapi.com/apigeek/api/google-search3/ */
+
+/*
+  const fetch = require('node-fetch');
+
+  const url = 'https://google-search3.p.rapidapi.com/api/v1/search/q=bluealliance';
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-User-Agent': 'desktop',
+      'X-Proxy-Location': 'US',
+      'X-RapidAPI-Key': 'ac11640c4dmshf8a32bd5a656497p1d87d2jsn0795ff07c5f4',
+      'X-RapidAPI-Host': 'google-search3.p.rapidapi.com'
+    }
+  };
+
+  fetch(url, options)
+    .then(res => res.json())
+    .then(json => console.log(json))
+    .catch(err => console.error('error:' + err));
+*/

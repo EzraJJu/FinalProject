@@ -7,7 +7,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${({ theme }) => theme.colors.layout.secondary};
+  background: #911D21;
+  /*
+  ${({ theme }) => theme.colors.layout.secondary};
+  */
 `
 
 export const NavLink = styled(link).attrs(({ theme }) => ({
@@ -19,7 +22,8 @@ export const NavLink = styled(link).attrs(({ theme }) => ({
   font-family: ${({ theme }) => theme.fonts.header.family};
   font-weight: ${({ theme }) => theme.fonts.header.weight};
   font-size: 22px;
-  color: ${({ theme }) => theme.colors.fonts.header};
+  color: grey;
   margin: 0 20px;
   text-decoration: none;
 `
+/* color: ${({ theme }) => theme.colors.fonts.header}; */
