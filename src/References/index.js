@@ -21,7 +21,7 @@ const Refs = () => {
     <Container>
       <Hello>Sites to reference</Hello>
       <Sub_Headers>Blue Alliance</Sub_Headers>
-      <Text> This {search} is the link to the Blue Alliance page</Text>
+      <Text> <a href="https://www.thebluealliance.com/">This</a> is the link to the Blue Alliance page</Text>
     </Container>
   )
 
