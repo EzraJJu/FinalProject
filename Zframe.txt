@@ -10,3 +10,10 @@ writing notes on what teams want and highest teams at the time
 
 Third page: 
 Team comm (for now) embed slack
+
+Links:
+
+On forms:https://betterprogramming.pub/the-complete-guide-to-forms-in-react-d2ba93f32825
+API charting: https://quickchart.io/
+-https://quickchart.io/documentation/
+Input box value: https://www.youtube.com/watch?v=Px4Lm8NixtE
