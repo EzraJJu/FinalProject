@@ -1,6 +1,5 @@
 import { Container, Hello, Text } from './styles'
 import React, { useState, useEffect } from 'react'
-import App from '../Comments'
 /*
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -105,7 +104,7 @@ export const Content = () => {
     <div>
       {
         print?
-        <h1>{data}</h1>
+        <h1>Hello {data}</h1>
         :null
       }
       <p>Enter your name</p>
@@ -131,7 +130,7 @@ export const Content2 = () => {
     <div>
       {
         print?
-        <h1>{data}</h1>
+        <h1>Focus on {data}</h1>
         :null
       }
       <p>Enter the team name and/or number that you are scouting</p>

@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Comments from './Comments'
+import References from './References'
 import AllTodos from './AllTodos'
 import Greeting from './Greeting'
 import NavBar from './Navbar'
@@ -23,8 +23,8 @@ const App = () => (
         <BrowserRouter basename="/Metro-Team395">
           <NavBar />
           <Switch>
-            <Route path="/team-communication">
-              <Comments />
+            <Route path="/References">
+              <References />
             </Route>
             <Route path="/pit/:id">
               <SpecificTodo />

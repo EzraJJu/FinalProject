@@ -11,7 +11,7 @@ const Navbar = () => (
   <Container>
     <NavLink to="/">Grand Central</NavLink>
     <NavLink to="/pit">Pit Scout</NavLink>
-    <NavLink to="/team-communicatnion">Team Slack</NavLink>
+    <NavLink to="/references">References</NavLink>
   </Container>
 )
 
